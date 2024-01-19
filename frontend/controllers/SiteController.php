@@ -29,7 +29,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-                'only' => ['logout', 'signup'],
+            'only' => ['logout', 'signup'/*,'index'*/],
                 'rules' => [
                     [
                         'actions' => ['signup'],
@@ -40,6 +40,15 @@ class SiteController extends Controller
                         'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
+                    ],
+                    [
+                        'actions' => ['index'],
+                        'allow' => true,
+                        'roles' => ['@'], // '@' 表示已登录用户
+                        'denyCallback' => function ($rule, $action) {
+                            // 如果未登录，重定向到登录页面
+                            return $this->redirect(['site/login']);
+                        },
                     ],
                 ],
             ],
