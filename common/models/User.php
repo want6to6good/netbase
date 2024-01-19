@@ -7,7 +7,7 @@ use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
-
+use common\models\Loginlog;
 /**
  * User model
  *
@@ -58,7 +58,13 @@ class User extends ActiveRecord implements IdentityInterface
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
         ];
     }
-
+    public function afterLogin($event)
+    {
+        $loginLog = new Loginlog();
+        $loginLog->name = $this->username; // Assuming you want to record the username
+        $loginLog->date = date('Y-m-d H:i:s');
+        $loginLog->save();
+    }
     /**
      * {@inheritdoc}
      */
