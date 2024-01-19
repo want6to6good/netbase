@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use app\models\Photos;
+use frontend\models\Photos;
 use frontend\models\PhotosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

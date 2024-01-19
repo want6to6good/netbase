@@ -1,6 +1,6 @@
 <?php
 
-use app\models\Videos;
+use frontend\models\Videos;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
@@ -10,17 +10,17 @@ use yii\grid\GridView;
 /** @var frontend\models\VideosSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Videos';
+$this->title = '视频';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="videos-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+<!--
     <p>
         <?= Html::a('Create Videos', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+-->
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([

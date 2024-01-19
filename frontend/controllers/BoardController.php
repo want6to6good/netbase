@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use app\models\Board;
+use frontend\models\Board;
 use frontend\models\BoardSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

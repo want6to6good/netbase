@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use Yii;
 
@@ -39,10 +39,10 @@ class Videos extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'date' => 'Date',
-            'title' => 'Title',
-            'url' => 'Url',
+            'id' => '序号',
+            'date' => '日期',
+            'title' => '标题',
+            'url' => '链接',
         ];
     }
 }

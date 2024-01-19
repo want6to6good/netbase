@@ -4,6 +4,9 @@
 
 $this->title = '关注核废水';
 ?>
+<style>
+    body{background:url(img/主页1.jpg)no-repeat fixed;background-size:cover;}
+</style>
 <div class="site-index">
     <div class="p-5 mb-4 bg-transparent rounded-3">
         <div class="container-fluid py-5 text-center">
@@ -12,7 +15,7 @@ $this->title = '关注核废水';
         </div>
     </div>
 
-    <div class="body-content">
+    <!--<div class="body-content">
 
         <div class="row">
             <div class="col-lg-4">
@@ -38,5 +41,5 @@ $this->title = '关注核废水';
             </div>
         </div>
 
-    </div>
+    </div>-->
 </div>

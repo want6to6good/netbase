@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use Yii;
 
@@ -39,9 +39,9 @@ class Board extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'content' => 'Content',
-            'date' => 'Date',
+            'id' => '序号',
+            'content' => '留言内容',
+            'date' => '留言日期',
         ];
     }
 }

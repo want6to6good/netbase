@@ -19,7 +19,7 @@ class UserdataSearch extends Userdata
     {
         return [
             [['id'], 'integer'],
-            [['content', 'date'], 'safe'],
+            [['name', 'selfsign'], 'safe'],
         ];
     }
 
@@ -60,10 +60,11 @@ class UserdataSearch extends Userdata
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'date' => $this->date,
+            'name'=>$this->name,
+            'selfsign'=>$this->selfsign,
         ]);
 
-        $query->andFilterWhere(['like', 'content', $this->content]);
+        //$query->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }

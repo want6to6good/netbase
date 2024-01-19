@@ -4,7 +4,7 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Board;
+use frontend\models\Board;
 
 /**
  * BoardSearch represents the model behind the search form of `app\models\Board`.

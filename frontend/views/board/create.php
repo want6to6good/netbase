@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var app\models\Board $model */
 
-$this->title = 'Create Board';
+$this->title = '我要留言';
 $this->params['breadcrumbs'][] = ['label' => 'Boards', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

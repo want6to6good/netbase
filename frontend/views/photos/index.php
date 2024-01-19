@@ -1,6 +1,6 @@
 <?php
 
-use app\models\Photos;
+use frontend\models\Photos;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
@@ -10,17 +10,17 @@ use yii\grid\GridView;
 /** @var frontend\models\PhotosSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Photos';
+$this->title = '图片';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="photos-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+<!--
     <p>
         <?= Html::a('Create Photos', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+-->
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([

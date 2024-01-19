@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use app\models\Videos;
+use frontend\models\Videos;
 use frontend\models\VideosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

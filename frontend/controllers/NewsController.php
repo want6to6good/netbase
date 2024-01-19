@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use app\models\News;
+use frontend\models\News;
 use frontend\models\NewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

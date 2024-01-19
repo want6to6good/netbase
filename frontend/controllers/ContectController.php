@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use app\models\Contect;
+use frontend\models\Contect;
 use frontend\models\ContectSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
