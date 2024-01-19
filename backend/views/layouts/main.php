@@ -35,7 +35,12 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => '主页', 'url' => ['/site/index']],
+        ['label' => '留言板', 'url' => ['/board/index']],
+        ['label' => '联系我们', 'url' => ['/contect/index']],
+        ['label' => '新闻', 'url' => ['/news/index']],
+        ['label' => '照片', 'url' => ['/photos/index']],
+        ['label' => '视频', 'url' => ['/videos/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

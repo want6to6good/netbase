@@ -1,24 +1,24 @@
 <?php
 
-use frontend\models\Userdata;
+use backend\models\Videos;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var frontend\models\UserdataSearch $searchModel */
+/** @var backend\models\VideosSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = '用户信息';
+$this->title = 'Videos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="userdata-index">
+<div class="videos-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('修改用户信息', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Videos', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -30,11 +30,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'name',
-            'selfsign:ntext',
+            'date',
+            'title',
+            'url:url',
             [
                 'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Userdata $model, $key, $index, $column) {
+                'urlCreator' => function ($action, Videos $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                  }
             ],

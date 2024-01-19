@@ -1,24 +1,24 @@
 <?php
 
-use frontend\models\Userdata;
+use backend\models\Photos;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var frontend\models\UserdataSearch $searchModel */
+/** @var backend\models\PhotosSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = '用户信息';
+$this->title = 'Photos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="userdata-index">
+<div class="photos-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('修改用户信息', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Photos', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -30,11 +30,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'name',
-            'selfsign:ntext',
+            'date',
+            'title:ntext',
+            'url:url',
             [
                 'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Userdata $model, $key, $index, $column) {
+                'urlCreator' => function ($action, Photos $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                  }
             ],
