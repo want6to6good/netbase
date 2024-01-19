@@ -10,16 +10,15 @@ use yii\grid\GridView;
 /** @var backend\models\ContectSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Contects';
+$this->title = '意见';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<style>
+    body{background:url(img/联系我们.jpg)no-repeat fixed;background-size:cover;}
+</style>
 <div class="contect-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Create Contect', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 

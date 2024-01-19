@@ -13,6 +13,9 @@ use yii\grid\GridView;
 $this->title = '图片';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<style>
+    body{background:url(img/图片.jpg)no-repeat fixed;background-size:cover;}
+</style>
 <div class="photos-index">
 
     <h1><?= Html::encode($this->title) ?></h1>

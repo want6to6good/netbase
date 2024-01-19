@@ -13,6 +13,9 @@ use yii\grid\GridView;
 $this->title = '联系我们';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<style>
+    body{background:url(img/联系我们.jpg)no-repeat fixed;background-size:cover;}
+</style>
 <div class="contect-index">
 
     <h1><?= Html::encode($this->title) ?></h1>

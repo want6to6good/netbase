@@ -10,15 +10,18 @@ use yii\grid\GridView;
 /** @var backend\models\BoardSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Boards';
+$this->title = '留言板';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<style>
+    body{background:url(img/留言板背景.jpg)no-repeat fixed;background-size:cover;}
+</style>
 <div class="board-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Board', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('留言', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

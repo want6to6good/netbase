@@ -5,20 +5,25 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
+?>
 
+<?php
 /** @var yii\web\View $this */
 /** @var backend\models\PhotosSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Photos';
+$this->title = '图片';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<style>
+    body{background:url(img/图片.jpg)no-repeat fixed;background-size:cover;}
+</style>
 <div class="photos-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Photos', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('添加图片', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

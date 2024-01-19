@@ -44,6 +44,7 @@ AppAsset::register($this);
         ['label' => '照片', 'url' => ['/photos/index']],
         ['label' => '视频', 'url' => ['/videos/index']],
         ['label' => '个人信息', 'url' => ['/userdata/index']],
+        ['label' => '团队信息','url' => ['/team/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];

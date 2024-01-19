@@ -10,9 +10,12 @@ use yii\grid\GridView;
 /** @var backend\models\VideosSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Videos';
+$this->title = '视频';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<style>
+    body{background:url(img/视频.jpg)no-repeat fixed;background-size:cover;}
+</style>
 <div class="videos-index">
 
     <h1><?= Html::encode($this->title) ?></h1>

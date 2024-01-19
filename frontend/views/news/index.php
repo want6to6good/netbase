@@ -13,6 +13,9 @@ use yii\grid\GridView;
 $this->title = '新闻';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<style>
+    body{background:url(img/新闻.jpg)no-repeat fixed;background-size:cover;}
+</style>
 <div class="news-index">
 
     <h1><?= Html::encode($this->title) ?></h1>

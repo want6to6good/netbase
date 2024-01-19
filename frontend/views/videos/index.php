@@ -13,6 +13,9 @@ use yii\grid\GridView;
 $this->title = '视频';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<style>
+    body{background:url(img/视频.jpg)no-repeat fixed;background-size:cover;}
+</style>
 <div class="videos-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
