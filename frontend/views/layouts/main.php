@@ -38,6 +38,12 @@ AppAsset::register($this);
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => '留言板', 'url' => ['/board/index']],
+        ['label' => '联系我们', 'url' => ['/contect/index']],
+        ['label' => '新闻', 'url' => ['/news/index']],
+        ['label' => '照片', 'url' => ['/photos/index']],
+        ['label' => '视频', 'url' => ['/videos/index']],
+        ['label' => '个人信息', 'url' => ['/userdata/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];

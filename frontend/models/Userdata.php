@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use Yii;
 
@@ -38,8 +38,8 @@ class Userdata extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'name' => 'Name',
-            'selfsign' => 'Selfsign',
+            'name' => '用户名',
+            'selfsign' => '个人签名',
         ];
     }
 }
