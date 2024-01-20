@@ -17,7 +17,7 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 
 /**
- * Site controller
+ * SiteController 网站控制器
  */
 class SiteController extends Controller
 {
@@ -29,7 +29,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-            'only' => ['logout', 'signup'/*,'index'*/],
+                'only' => ['logout', 'signup', 'index'],
                 'rules' => [
                     [
                         'actions' => ['signup'],
@@ -46,7 +46,7 @@ class SiteController extends Controller
                         'allow' => true,
                         'roles' => ['@'], // '@' 表示已登录用户
                         'denyCallback' => function ($rule, $action) {
-                            // 如果未登录，重定向到登录页面
+                            // 如果未登录，则重定向到登录页面
                             return $this->redirect(['site/login']);
                         },
                     ],
@@ -78,7 +78,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * 显示首页。
      *
      * @return mixed
      */
@@ -88,7 +88,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Logs in a user.
+     * 用户登录。
      *
      * @return mixed
      */
@@ -111,7 +111,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Logs out the current user.
+     * 用户登出。
      *
      * @return mixed
      */
@@ -123,7 +123,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays contact page.
+     * 显示联系页面。
      *
      * @return mixed
      */
@@ -132,9 +132,9 @@ class SiteController extends Controller
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
-                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                Yii::$app->session->setFlash('success', '感谢您联系我们。我们将尽快回复您。');
             } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
+                Yii::$app->session->setFlash('error', '发送您的消息时出现错误。');
             }
 
             return $this->refresh();
@@ -146,7 +146,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
+     * 显示关于页面。
      *
      * @return mixed
      */
@@ -156,7 +156,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Signs user up.
+     * 用户注册。
      *
      * @return mixed
      */
@@ -164,7 +164,7 @@ class SiteController extends Controller
     {
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
-            Yii::$app->session->setFlash('success', 'Thank you for registration. Please check your inbox for verification email.');
+            Yii::$app->session->setFlash('success', '感谢您注册。请检查您的收件箱以获取验证电子邮件。');
             return $this->goHome();
         }
 
@@ -174,7 +174,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Requests password reset.
+     * 请求重置密码。
      *
      * @return mixed
      */
@@ -183,12 +183,12 @@ class SiteController extends Controller
         $model = new PasswordResetRequestForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
-                Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+                Yii::$app->session->setFlash('success', '请检查您的电子邮件以获取进一步的说明。');
 
                 return $this->goHome();
             }
 
-            Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for the provided email address.');
+            Yii::$app->session->setFlash('error', '抱歉，我们无法为提供的电子邮件地址重置密码。');
         }
 
         return $this->render('requestPasswordResetToken', [
@@ -197,7 +197,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Resets password.
+     * 重置密码。
      *
      * @param string $token
      * @return mixed
@@ -212,7 +212,7 @@ class SiteController extends Controller
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
-            Yii::$app->session->setFlash('success', 'New password saved.');
+            Yii::$app->session->setFlash('success', '新密码已保存。');
 
             return $this->goHome();
         }
@@ -223,7 +223,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Verify email address
+     * 验证电子邮件地址。
      *
      * @param string $token
      * @throws BadRequestHttpException
@@ -237,16 +237,16 @@ class SiteController extends Controller
             throw new BadRequestHttpException($e->getMessage());
         }
         if (($user = $model->verifyEmail()) && Yii::$app->user->login($user)) {
-            Yii::$app->session->setFlash('success', 'Your email has been confirmed!');
+            Yii::$app->session->setFlash('success', '您的电子邮件已确认！');
             return $this->goHome();
         }
 
-        Yii::$app->session->setFlash('error', 'Sorry, we are unable to verify your account with provided token.');
+        Yii::$app->session->setFlash('error', '抱歉，我们无法使用提供的令牌验证您的帐户。');
         return $this->goHome();
     }
 
     /**
-     * Resend verification email
+     * 重新发送验证电子邮件。
      *
      * @return mixed
      */
@@ -255,10 +255,10 @@ class SiteController extends Controller
         $model = new ResendVerificationEmailForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
-                Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+                Yii::$app->session->setFlash('success', '请检查您的电子邮件以获取进一步的说明。');
                 return $this->goHome();
             }
-            Yii::$app->session->setFlash('error', 'Sorry, we are unable to resend verification email for the provided email address.');
+            Yii::$app->session->setFlash('error', '抱歉，我们无法重新发送验证电子邮件到提供的电子邮件地址。');
         }
 
         return $this->render('resendVerificationEmail', [
@@ -266,3 +266,4 @@ class SiteController extends Controller
         ]);
     }
 }
+

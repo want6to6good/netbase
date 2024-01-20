@@ -9,7 +9,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * VideosController implements the CRUD actions for Videos model.
+ * VideosController 视频控制器，实现对 Videos 模型的 CRUD 操作。
  */
 class VideosController extends Controller
 {
@@ -32,7 +32,7 @@ class VideosController extends Controller
     }
 
     /**
-     * Lists all Videos models.
+     * 显示所有 Videos 模型。
      *
      * @return string
      */
@@ -48,10 +48,10 @@ class VideosController extends Controller
     }
 
     /**
-     * Displays a single Videos model.
+     * 显示单个 Videos 模型。
      * @param int $id ID
      * @return string
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型则抛出异常
      */
     public function actionView($id)
     {
@@ -61,8 +61,8 @@ class VideosController extends Controller
     }
 
     /**
-     * Creates a new Videos model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * 创建新的 Videos 模型。
+     * 如果创建成功，浏览器将被重定向到 'view' 页面。
      * @return string|\yii\web\Response
      */
     public function actionCreate()
@@ -83,11 +83,11 @@ class VideosController extends Controller
     }
 
     /**
-     * Updates an existing Videos model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * 更新现有的 Videos 模型。
+     * 如果更新成功，浏览器将被重定向到 'view' 页面。
      * @param int $id ID
      * @return string|\yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型则抛出异常
      */
     public function actionUpdate($id)
     {
@@ -103,11 +103,11 @@ class VideosController extends Controller
     }
 
     /**
-     * Deletes an existing Videos model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * 删除现有的 Videos 模型。
+     * 如果删除成功，浏览器将被重定向到 'index' 页面。
      * @param int $id ID
      * @return \yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型则抛出异常
      */
     public function actionDelete($id)
     {
@@ -117,11 +117,11 @@ class VideosController extends Controller
     }
 
     /**
-     * Finds the Videos model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
+     * 根据主键值查找 Videos 模型。
+     * 如果未找到模型，将抛出 404 HTTP 异常。
      * @param int $id ID
-     * @return Videos the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * @return Videos 加载的模型
+     * @throws NotFoundHttpException 如果找不到模型则抛出异常
      */
     protected function findModel($id)
     {
@@ -129,6 +129,6 @@ class VideosController extends Controller
             return $model;
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        throw new NotFoundHttpException('请求的页面不存在。');
     }
 }

@@ -9,7 +9,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ContectController implements the CRUD actions for Contect model.
+ * ContectController 实现了对 Contect 模型的 CRUD 操作。
  */
 class ContectController extends Controller
 {
@@ -32,7 +32,7 @@ class ContectController extends Controller
     }
 
     /**
-     * Lists all Contect models.
+     * 显示所有 Contect 模型。
      *
      * @return string
      */
@@ -48,10 +48,11 @@ class ContectController extends Controller
     }
 
     /**
-     * Displays a single Contect model.
-     * @param int $id 序号
+     * 显示单个 Contect 模型。
+     *
+     * @param int $id 搴忓彿
      * @return string
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型
      */
     public function actionView($id)
     {
@@ -61,8 +62,9 @@ class ContectController extends Controller
     }
 
     /**
-     * Creates a new Contect model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * 创建新的 Contect 模型。
+     * 如果创建成功，浏览器将被重定向到 'view' 页面。
+     *
      * @return string|\yii\web\Response
      */
     public function actionCreate()
@@ -83,11 +85,12 @@ class ContectController extends Controller
     }
 
     /**
-     * Updates an existing Contect model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param int $id 序号
+     * 更新现有的 Contect 模型。
+     * 如果更新成功，浏览器将被重定向到 'view' 页面。
+     *
+     * @param int $id 搴忓彿
      * @return string|\yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型
      */
     public function actionUpdate($id)
     {
@@ -103,11 +106,12 @@ class ContectController extends Controller
     }
 
     /**
-     * Deletes an existing Contect model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param int $id 序号
+     * 删除现有的 Contect 模型。
+     * 如果删除成功，浏览器将被重定向到 'index' 页面。
+     *
+     * @param int $id 搴忓彿
      * @return \yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型
      */
     public function actionDelete($id)
     {
@@ -117,11 +121,12 @@ class ContectController extends Controller
     }
 
     /**
-     * Finds the Contect model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $id 序号
-     * @return Contect the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * 根据主键值查找 Contect 模型。
+     * 如果找不到模型，将抛出 404 HTTP 异常。
+     *
+     * @param int $id 搴忓彿
+     * @return Contect 加载的模型
+     * @throws NotFoundHttpException 如果找不到模型
      */
     protected function findModel($id)
     {
@@ -132,3 +137,4 @@ class ContectController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 }
+

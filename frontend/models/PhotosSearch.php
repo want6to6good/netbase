@@ -5,8 +5,9 @@ namespace frontend\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use frontend\models\Photos;
+
 /**
- * PhotosSearch represents the model behind the search form of `frontend\models\Photos`.
+ * PhotosSearch 表示 `frontend\models\Photos` 搜索表单的模型。
  */
 class PhotosSearch extends Photos
 {
@@ -16,7 +17,7 @@ class PhotosSearch extends Photos
     public function rules()
     {
         return [
-            [['id', 'date', 'title', 'url'], 'safe'],
+            [['id', 'date', 'title', 'url'], 'safe'], // id、date、title和url字段为安全输入类型
         ];
     }
 
@@ -25,12 +26,12 @@ class PhotosSearch extends Photos
      */
     public function scenarios()
     {
-        // bypass scenarios() implementation in the parent class
+        // 绕过父类中 scenarios() 的实现
         return Model::scenarios();
     }
 
     /**
-     * Creates data provider instance with search query applied
+     * 创建一个带有应用搜索查询的数据提供程序实例
      *
      * @param array $params
      *
@@ -40,7 +41,7 @@ class PhotosSearch extends Photos
     {
         $query = Photos::find();
 
-        // add conditions that should always apply here
+        // 在这里添加应始终应用的条件
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -49,12 +50,12 @@ class PhotosSearch extends Photos
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
+            // 如果验证失败，取消注释以下行，如果不希望在验证失败时返回任何记录
             // $query->where('0=1');
             return $dataProvider;
         }
 
-        // grid filtering conditions
+        // 网格过滤条件
         $query->andFilterWhere(['like', 'id', $this->id])
             ->andFilterWhere(['like', 'date', $this->date])
             ->andFilterWhere(['like', 'title', $this->title])
@@ -63,3 +64,4 @@ class PhotosSearch extends Photos
         return $dataProvider;
     }
 }
+

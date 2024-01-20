@@ -9,7 +9,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * UserdataController implements the CRUD actions for Userdata model.
+ * UserdataController 用户数据控制器，实现对 Userdata 模型的 CRUD 操作。
  */
 class UserdataController extends Controller
 {
@@ -32,7 +32,7 @@ class UserdataController extends Controller
     }
 
     /**
-     * Lists all Userdata models.
+     * 显示所有 Userdata 模型。
      *
      * @return string
      */
@@ -48,10 +48,10 @@ class UserdataController extends Controller
     }
 
     /**
-     * Displays a single Userdata model.
+     * 显示单个 Userdata 模型。
      * @param int $id
      * @return string
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型则抛出异常
      */
     public function actionView($id)
     {
@@ -61,8 +61,8 @@ class UserdataController extends Controller
     }
 
     /**
-     * Creates a new Userdata model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * 创建新的 Userdata 模型。
+     * 如果创建成功，浏览器将被重定向到 'view' 页面。
      * @return string|\yii\web\Response
      */
     public function actionCreate()
@@ -83,11 +83,11 @@ class UserdataController extends Controller
     }
 
     /**
-     * Updates an existing Userdata model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * 更新现有的 Userdata 模型。
+     * 如果更新成功，浏览器将被重定向到 'view' 页面。
      * @param int $id
      * @return string|\yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型则抛出异常
      */
     public function actionUpdate($id)
     {
@@ -103,11 +103,11 @@ class UserdataController extends Controller
     }
 
     /**
-     * Deletes an existing Userdata model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * 删除现有的 Userdata 模型。
+     * 如果删除成功，浏览器将被重定向到 'index' 页面。
      * @param int $id
      * @return \yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型则抛出异常
      */
     public function actionDelete($id)
     {
@@ -117,11 +117,11 @@ class UserdataController extends Controller
     }
 
     /**
-     * Finds the Userdata model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
+     * 根据主键值查找 Userdata 模型。
+     * 如果未找到模型，将抛出 404 HTTP 异常。
      * @param int $id
-     * @return Userdata the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * @return Userdata 加载的模型
+     * @throws NotFoundHttpException 如果找不到模型则抛出异常
      */
     protected function findModel($id)
     {
@@ -129,6 +129,6 @@ class UserdataController extends Controller
             return $model;
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        throw new NotFoundHttpException('请求的页面不存在。');
     }
 }
