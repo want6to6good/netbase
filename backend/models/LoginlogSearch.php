@@ -36,6 +36,13 @@ class LoginlogSearch extends Loginlog
      *
      * @return ActiveDataProvider
      */
+    /**
+     * 首先，创建一个基于 Loginlog 模型的查询 (Loginlog::find())。
+     * ActiveDataProvider 用于提供查询结果的数据，支持分页和排序。
+     * load($params) 加载搜索表单提交的数据。
+     * 如果数据验证 (validate()) 失败，则默认返回所有数据（可以通过取消注释 $query->where('0=1'); 来改变这一行为）。
+     * andFilterWhere 方法添加条件到查询中。这里根据 id、name 和 date 字段的值进行筛选，使用了 like 条件以支持模糊匹配。
+     */
     public function search($params)
     {
         $query = Loginlog::find();
