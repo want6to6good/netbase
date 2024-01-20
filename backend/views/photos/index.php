@@ -11,7 +11,9 @@ use yii\grid\GridView;
 /** @var yii\web\View $this */
 /** @var backend\models\PhotosSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
-
+/**
+ * 用于显示和管理 Photos 模型的数据
+ */
 $this->title = '图片';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
