@@ -9,7 +9,9 @@ use yii\grid\GridView;
 /** @var yii\web\View $this */
 /** @var backend\models\LoginlogSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
-
+/**
+ * 用于显示和管理 Loginlog 模型的数据
+ */
 $this->title = '登陆记录';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
