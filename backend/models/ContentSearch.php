@@ -39,6 +39,13 @@ class ContectSearch extends Contect
      *
      * @return ActiveDataProvider
      */
+    /**
+     * 它创建一个基于 Contect 模型的查询。
+     * ActiveDataProvider 用于提供查询结果的数据，支持分页和排序。
+     * load($params) 加载搜索表单提交的数据。
+     * 如果数据验证 (validate()) 失败，则默认返回所有数据（可以通过取消注释 $query->where('0=1'); 来改变这一行为）。
+     * andFilterWhere 方法添加条件到查询中。这里根据 id、name、mail、和 content 字段的值进行筛选。特别地，content 字段使用了 like 条件，用于模糊匹配。
+     */
     public function search($params)
     {
         $query = Contect::find();
