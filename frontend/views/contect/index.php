@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var frontend\models\ContectSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = '联系我们';
+$this->title = '联系我们';// 设置页面标题
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>

@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var frontend\models\NewsSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = '新闻';
+$this->title = '新闻';// 设置页面标题
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>

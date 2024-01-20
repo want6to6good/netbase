@@ -2,7 +2,7 @@
 
 /** @var yii\web\View $this */
 
-$this->title = '关注核废水';
+$this->title = '关注核废水';// 设置页面标题
 ?>
 <style>
     body{background:url(img/主页.jpg)no-repeat fixed;background-size:cover;}

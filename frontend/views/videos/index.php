@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var frontend\models\VideosSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = '视频';
+$this->title = '视频';// 设置页面标题
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>

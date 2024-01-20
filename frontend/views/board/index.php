@@ -14,7 +14,7 @@ use yii\grid\GridView;
 /** @var frontend\models\BoardSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = '留言板';
+$this->title = '留言板';// 设置页面标题
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="board-index">

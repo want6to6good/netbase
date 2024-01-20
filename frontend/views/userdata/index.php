@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var frontend\models\UserdataSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = '用户信息';
+$this->title = '用户信息';// 设置页面标题
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="userdata-index">

@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var frontend\models\PhotosSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = '图片';
+$this->title = '图片';// 设置页面标题
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
