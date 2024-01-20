@@ -9,7 +9,9 @@ use yii\grid\GridView;
 /** @var yii\web\View $this */
 /** @var backend\models\NewsSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
-
+/**
+ * 用于显示和管理 News 模型的数据
+ */
 $this->title = '新闻';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
