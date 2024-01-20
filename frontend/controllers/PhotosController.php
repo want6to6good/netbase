@@ -9,7 +9,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * PhotosController implements the CRUD actions for Photos model.
+ * PhotosController 实现了对 Photos 模型的 CRUD 操作。
  */
 class PhotosController extends Controller
 {
@@ -32,7 +32,7 @@ class PhotosController extends Controller
     }
 
     /**
-     * Lists all Photos models.
+     * 显示所有 Photos 模型。
      *
      * @return string
      */
@@ -48,10 +48,11 @@ class PhotosController extends Controller
     }
 
     /**
-     * Displays a single Photos model.
+     * 显示单个 Photos 模型。
+     *
      * @param int $id ID
      * @return string
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型
      */
     public function actionView($id)
     {
@@ -61,8 +62,9 @@ class PhotosController extends Controller
     }
 
     /**
-     * Creates a new Photos model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * 创建新的 Photos 模型。
+     * 如果创建成功，浏览器将被重定向到 'view' 页面。
+     *
      * @return string|\yii\web\Response
      */
     public function actionCreate()
@@ -83,11 +85,12 @@ class PhotosController extends Controller
     }
 
     /**
-     * Updates an existing Photos model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * 更新现有的 Photos 模型。
+     * 如果更新成功，浏览器将被重定向到 'view' 页面。
+     *
      * @param int $id ID
      * @return string|\yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型
      */
     public function actionUpdate($id)
     {
@@ -103,11 +106,12 @@ class PhotosController extends Controller
     }
 
     /**
-     * Deletes an existing Photos model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * 删除现有的 Photos 模型。
+     * 如果删除成功，浏览器将被重定向到 'index' 页面。
+     *
      * @param int $id ID
      * @return \yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型
      */
     public function actionDelete($id)
     {
@@ -117,11 +121,12 @@ class PhotosController extends Controller
     }
 
     /**
-     * Finds the Photos model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
+     * 根据主键值查找 Photos 模型。
+     * 如果找不到模型，将抛出 404 HTTP 异常。
+     *
      * @param int $id ID
-     * @return Photos the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * @return Photos 加载的模型
+     * @throws NotFoundHttpException 如果找不到模型
      */
     protected function findModel($id)
     {

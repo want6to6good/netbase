@@ -9,7 +9,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * BoardController implements the CRUD actions for Board model.
+ * BoardController 实现了对 Board 模型的 CRUD 操作。
  */
 class BoardController extends Controller
 {
@@ -32,7 +32,7 @@ class BoardController extends Controller
     }
 
     /**
-     * Lists all Board models.
+     * 显示所有 Board 模型。
      *
      * @return string
      */
@@ -48,10 +48,11 @@ class BoardController extends Controller
     }
 
     /**
-     * Displays a single Board model.
+     * 显示单个 Board 模型。
+     *
      * @param int $id ID
      * @return string
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型
      */
     public function actionView($id)
     {
@@ -61,8 +62,9 @@ class BoardController extends Controller
     }
 
     /**
-     * Creates a new Board model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * 创建新的 Board 模型。
+     * 如果创建成功，浏览器将被重定向到 'view' 页面。
+     *
      * @return string|\yii\web\Response
      */
     public function actionCreate()
@@ -83,11 +85,12 @@ class BoardController extends Controller
     }
 
     /**
-     * Updates an existing Board model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * 更新现有的 Board 模型。
+     * 如果更新成功，浏览器将被重定向到 'view' 页面。
+     *
      * @param int $id ID
      * @return string|\yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型
      */
     public function actionUpdate($id)
     {
@@ -103,11 +106,12 @@ class BoardController extends Controller
     }
 
     /**
-     * Deletes an existing Board model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * 删除现有的 Board 模型。
+     * 如果删除成功，浏览器将被重定向到 'index' 页面。
+     *
      * @param int $id ID
      * @return \yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
+     * @throws NotFoundHttpException 如果找不到模型
      */
     public function actionDelete($id)
     {
@@ -117,11 +121,12 @@ class BoardController extends Controller
     }
 
     /**
-     * Finds the Board model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
+     * 根据主键值查找 Board 模型。
+     * 如果找不到模型，将抛出 404 HTTP 异常。
+     *
      * @param int $id ID
-     * @return Board the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * @return Board 加载的模型
+     * @throws NotFoundHttpException 如果找不到模型
      */
     protected function findModel($id)
     {
@@ -132,3 +137,4 @@ class BoardController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 }
+
