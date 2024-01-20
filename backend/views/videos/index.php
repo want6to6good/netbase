@@ -9,7 +9,9 @@ use yii\grid\GridView;
 /** @var yii\web\View $this */
 /** @var backend\models\VideosSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
-
+/**
+ * 用于显示和管理 Videos 模型的数据
+ */
 $this->title = '视频';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
