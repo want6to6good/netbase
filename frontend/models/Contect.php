@@ -7,10 +7,10 @@ use Yii;
 /**
  * This is the model class for table "contect".
  *
- * @property int $id
- * @property string $name
- * @property string $mail
- * @property string $content
+ * @property int $id 序号
+ * @property string $name 名字
+ * @property string $mail 邮箱地址
+ * @property string $content 内容
  */
 class Contect extends \yii\db\ActiveRecord
 {
@@ -28,9 +28,9 @@ class Contect extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'mail', 'content'], 'required'],
-            [['content'], 'string'],
-            [['name', 'mail'], 'string', 'max' => 32],
+            [['name', 'mail', 'content'], 'required'], // name、mail和content字段不能为空
+            [['content'], 'string'], // content字段为字符串类型
+            [['name', 'mail'], 'string', 'max' => 32], // name和mail字段为最大长度为32的字符串类型
         ];
     }
 
@@ -47,3 +47,4 @@ class Contect extends \yii\db\ActiveRecord
         ];
     }
 }
+

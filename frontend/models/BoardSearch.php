@@ -7,7 +7,7 @@ use yii\data\ActiveDataProvider;
 use frontend\models\Board;
 
 /**
- * BoardSearch represents the model behind the search form of `app\models\Board`.
+ * BoardSearch 表示 `app\models\Board` 搜索表单的模型。
  */
 class BoardSearch extends Board
 {
@@ -17,8 +17,8 @@ class BoardSearch extends Board
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['content', 'date'], 'safe'],
+            [['id'], 'integer'], // id字段为整数类型
+            [['content', 'date'], 'safe'], // content和date字段为安全的（可以包含任何数据类型）
         ];
     }
 
@@ -27,12 +27,12 @@ class BoardSearch extends Board
      */
     public function scenarios()
     {
-        // bypass scenarios() implementation in the parent class
+        // 绕过父类中的 scenarios() 实现
         return Model::scenarios();
     }
 
     /**
-     * Creates data provider instance with search query applied
+     * 使用应用查询的条件创建数据提供程序实例
      *
      * @param array $params
      *
@@ -42,7 +42,7 @@ class BoardSearch extends Board
     {
         $query = Board::find();
 
-        // add conditions that should always apply here
+        // 在这里添加始终应用的条件
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -51,12 +51,12 @@ class BoardSearch extends Board
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
+            // 如果验证失败，取消注释以下行，如果不想在验证失败时返回任何记录
             // $query->where('0=1');
             return $dataProvider;
         }
 
-        // grid filtering conditions
+        // 在表格中添加过滤条件
         $query->andFilterWhere([
             'id' => $this->id,
             'date' => $this->date,
@@ -67,3 +67,4 @@ class BoardSearch extends Board
         return $dataProvider;
     }
 }
+

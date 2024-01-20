@@ -7,9 +7,9 @@ use Yii;
 /**
  * This is the model class for table "board".
  *
- * @property int $id
- * @property string $content
- * @property string $date
+ * @property int $id 序号
+ * @property string $content 留言内容
+ * @property string $date 留言日期
  */
 class Board extends \yii\db\ActiveRecord
 {
@@ -27,9 +27,9 @@ class Board extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['content', 'date'], 'required'],
-            [['content'], 'string'],
-            [['date'], 'safe'],
+            [['content', 'date'], 'required'], // 确保content和date字段不能为空
+            [['content'], 'string'], // content字段是字符串类型
+            [['date'], 'safe'], // date字段是安全的日期格式
         ];
     }
 
@@ -45,3 +45,4 @@ class Board extends \yii\db\ActiveRecord
         ];
     }
 }
+
