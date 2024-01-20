@@ -38,6 +38,13 @@ class VideosSearch extends Videos
      *
      * @return ActiveDataProvider
      */
+    /**
+     * 创建一个基于 Videos 模型的查询 (Videos::find())。
+     * ActiveDataProvider 用于提供查询结果的数据，支持分页和排序。
+     * load($params) 加载搜索表单提交的数据。
+     * 如果数据验证 (validate()) 失败，则默认返回所有数据（可以通过取消注释 $query->where('0=1'); 来改变这一行为）。
+     * andFilterWhere 方法添加条件到查询中。根据 id、date、title 和 url 字段的值进行筛选。
+     */
     public function search($params)
     {
         $query = Videos::find();
