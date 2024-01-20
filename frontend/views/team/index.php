@@ -15,8 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>个人作业</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body style="background-image: url(img/bk/小组成员背景2.jpg);no-repeat fixed;background-size:cover;">
@@ -46,9 +44,6 @@
                 			</button>
                 		</a>
                     </div>
-                    <div style="float: right;width: 40%;margin-top: 20px;">
-                    	<img src="img/STU_02.jpg" style="width: 200px;height: 200px;margin-bottom: 25px;margin-top: 25px;border-radius:10px;" />
-                    </div>
                 </header>
             </div>
             
@@ -66,9 +61,6 @@
                 			</button>
                 		</a>
                     </div>
-                    <div  style="float: left;width: 30%;margin-left: 50px;margin-top: 20px;">
-                    	<img src="img/STU_03.jpg" style="width: 200px;height: 200px;margin-bottom: 25px;margin-top: 25px;border-radius:10px;" />
-                    </div>
                 </header>
             </div>
             
@@ -85,9 +77,6 @@
                 				个人作业
                 			</button>
                 		</a>
-                    </div>
-                    <div  style="float: right;width: 40%;margin-top: 20px;">
-                    	<img src="img/STU_01.jpg" style="width: 200px;height: 200px;margin-bottom: 25px;margin-top: 25px;border-radius:10px;" />
                     </div>
                 </header>
             </div>           
