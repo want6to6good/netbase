@@ -9,7 +9,9 @@ use yii\grid\GridView;
 /** @var yii\web\View $this */
 /** @var backend\models\ContectSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
-
+/**
+ * 用于显示和管理 Contect 模型的数据
+ */
 $this->title = '意见';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
