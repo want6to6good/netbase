@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * team:你说的队，NKU
+ * Coding by miyilin 2111566,20240119
+ * view
+ */
 /** @var yii\web\View $this */
 /** @var yii\bootstrap5\ActiveForm $form */
 /** @var \frontend\models\ResetPasswordForm $model */

@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * team:你说的队，NKU
+ * Coding by zhanglinhao 2113976,20240119
+ * 框架生成
+ */
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 

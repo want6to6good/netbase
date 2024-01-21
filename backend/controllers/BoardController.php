@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * team:你说的队，NKU
+ * Coding by zhanglinhao 2113976,20240119
+ * 控制器
+ */
 namespace backend\controllers;
 
 use backend\models\Board;

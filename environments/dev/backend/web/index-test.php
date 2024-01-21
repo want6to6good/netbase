@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * team:你说的队，NKU
+ * Coding by zhanglinhao 2113976,20240119
+ * 框架生成
+ */
 // NOTE: Make sure this file is not accessible when deployed to production
 if (!in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1'])) {
     die('You are not allowed to access this file.');

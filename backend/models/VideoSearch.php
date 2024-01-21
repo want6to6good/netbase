@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * team:你说的队，NKU
+ * Coding by zhujingbo 2111451,20240119
+ * model
+ */
 namespace backend\models;
 
 use yii\base\Model;

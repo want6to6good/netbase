@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * team:你说的队，NKU
+ * Coding by miyilin 2111566,20240119
+ * view
+ */
 use backend\models\News;
 use yii\helpers\Html;
 use yii\helpers\Url;

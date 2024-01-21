@@ -1,4 +1,9 @@
 <?php
+/**
+ * team:你说的队，NKU
+ * Coding by zhanglinhao 2113976,20240119
+ * 框架生成
+ */
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',

@@ -1,4 +1,10 @@
-
+<?php
+/**
+ * team:你说的队，NKU
+ * Coding by zhujingbo 2111451,20240119
+ * view
+ */
+?>
 
 <!DOCTYPE html>
 <html lang="en">

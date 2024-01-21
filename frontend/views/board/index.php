@@ -1,4 +1,9 @@
 <?php
+/**
+ * team:你说的队，NKU
+ * Coding by zhanglinhao 2113976,20240119
+ * view
+ */
 ?>
 <style>
     body{background:url(img/留言板背景.jpg)no-repeat fixed;background-size:cover;}
