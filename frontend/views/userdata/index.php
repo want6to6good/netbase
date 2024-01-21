@@ -32,12 +32,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             'selfsign:ntext',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Userdata $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
-                 }
-            ],
         ],
     ]); ?>
 
