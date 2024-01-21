@@ -35,12 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'content:ntext',
             'date',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Board $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
-                 }
-            ],
         ],
     ]); ?>-->
     <div class="jumbotron text-center bg-transparent"style="float: middle">
