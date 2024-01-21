@@ -52,10 +52,10 @@
                 <header  >
                     <div  style="color: rgba(81,86,92,1.0);float: right;width: 50%;margin-bottom:50px ;margin-left: 50px;margin-top: 25px;">
                     	<h2>STU_03</h2>
-                    	<p style="margin-top: 30px;">南开大学 2019级 计算机科学与技术</p>
-                        <p >学号：STU_ID_03</p>
-                    	<p >邮箱：1749255982@qq.com</p>
-                		<a  href="https://github.com/vampire-oyz/DBIS-personal-homework" >
+                    	<p style="margin-top: 30px;">南开大学 2021级 计算机科学与技术</p>
+                        <p >学号：2111451</p>
+                    	<p >邮箱：1453939012@qq.com</p>
+                		<a  href="https://github.com/HangHang0420/NetDatabase-Personnal" >
                 			<button style="margin-top: 30px;border: none;width: 100px;height: 50px;border-radius: 10px;box-shadow: 0 7px #A8A8A8;">
                 				个人作业
                 			</button>
