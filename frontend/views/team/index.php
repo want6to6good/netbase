@@ -1,10 +1,4 @@
-<?php
-/**
-* Team: DBIS学前班
-* coding by STU_02 STU_ID_02
-* 这里是小组成员页面的视图
-*/
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +8,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>个人作业</title>
+    <title>团队信息</title>
 </head>
+<style>
+    body{background:url(img/团队介绍.jpg)no-repeat fixed;background-size:cover;}
+</style>
+<body style="no-repeat fixed;background-size:cover;">
 
-<body style="background-image: url(img/bk/小组成员背景2.jpg);no-repeat fixed;background-size:cover;">
-
-        <img src="img/队标1.png"/>
-        <a  href="https://github.com/vampire-oyz/DBIS_HOMEWORK" >
+        <a  href="https://github.com/want6to6good/netbase/tree/main" >
             <button style="margin-top: 30px;border: none;width: 100px;height: 50px;border-radius: 10px;box-shadow: 0 7px #A8A8A8;">
             大作业链接
             </button>   
@@ -34,7 +29,7 @@
             <div style=" width:600px;margin-left: 250px; border-radius:10px; float: left ;background-color:rgba(255,255,255,0.5); ">
                 <header  >
                     <div  style="color: rgba(81,86,92,1.0);float: left;width: 50%;margin-bottom:50px ;margin-left: 50px;margin-top: 25px;">
-                    	<h2>STU_02</h2>
+                    	<h2>米奕霖</h2>
                     	<p style="margin-top: 30px;">南开大学 2021级 计算机科学与技术</p>
                         <p >学号：2111566</p>
                     	<p >邮箱：1206164479@qq.com</p>
@@ -50,8 +45,8 @@
             
             <div style="width:600px ;margin-left: 250px; margin-top: 50px;border-radius:10px;float: left;background-color:rgba(255,255,255,0.5); ">
                 <header  >
-                    <div  style="color: rgba(81,86,92,1.0);float: right;width: 50%;margin-bottom:50px ;margin-left: 50px;margin-top: 25px;">
-                    	<h2>STU_03</h2>
+                    <div  style="color: rgba(81,86,92,1.0);float: left;width: 50%;margin-bottom:50px ;margin-left: 50px;margin-top: 25px;">
+                    	<h2>朱景博</h2>
                     	<p style="margin-top: 30px;">南开大学 2021级 计算机科学与技术</p>
                         <p >学号：2111451</p>
                     	<p >邮箱：1453939012@qq.com</p>
@@ -68,11 +63,11 @@
             <div   style="width:600px ;margin-top: 50px;margin-left: 250px;border-radius:10px;float: left;background-color:rgba(255,255,255,0.5); ">
                 <header  >
                     <div  style="color: rgba(81,86,92,1.0);float: left;width: 50%;margin-bottom:50px ;margin-left: 50px;margin-top: 25px;">
-                    	<h2>STU_01</h2>
-                    	<p style="margin-top: 30px;">南开大学 2019级 计算机科学与技术</p>
-                        <p >学号：STU_ID_01</p>
-                    	<p >邮箱：STU_ID_01@mail.nankai.edu.cn</p>
-                		<a  href="https://github.com/tinsir888/NKDBIS-Internet-DB-dev-personal" >
+                    	<h2>张麟浩</h2>
+                    	<p style="margin-top: 30px;">南开大学 2021级 计算机科学与技术</p>
+                        <p >学号：2113976</p>
+                    	<p >邮箱：3123342340@qq.com</p>
+                		<a  href="https://github.com/want6to6good/netbase_personwork" >
                 			<button style="margin-top: 30px;border: none;width: 100px;height: 50px;border-radius: 10px;box-shadow: 0 7px #A8A8A8;">
                 				个人作业
                 			</button>
