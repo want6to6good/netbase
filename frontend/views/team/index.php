@@ -35,10 +35,10 @@
                 <header  >
                     <div  style="color: rgba(81,86,92,1.0);float: left;width: 50%;margin-bottom:50px ;margin-left: 50px;margin-top: 25px;">
                     	<h2>STU_02</h2>
-                    	<p style="margin-top: 30px;">南开大学 2019级 信息安全</p>
-                        <p >学号：STU_ID_02</p>
-                    	<p >邮箱：1140014872@qq.com</p>
-                		<a  href="https://github.com/Sh4Lv/DBIS_Personal_homework" >
+                    	<p style="margin-top: 30px;">南开大学 2021级 计算机科学与技术</p>
+                        <p >学号：2111566</p>
+                    	<p >邮箱：1206164479@qq.com</p>
+                		<a  href="https://github.com/Miyilin2003/Database_Homework" >
                 			<button style="margin-top: 30px;border: none;width: 100px;height: 50px;border-radius: 10px;box-shadow: 0 7px #A8A8A8;">
                 				个人作业
                 			</button>
